@@ -14,7 +14,5 @@ while ! docker info &> /dev/null; do
     sleep 10
 done
 
-docker volume rm $(docker volume ls -q)
-
 # Delete all dangling images
 docker image prune -f --filter "dangling=true"

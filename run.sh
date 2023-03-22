@@ -14,4 +14,4 @@ done
 
 echo "Docker daemon is running"
 
-docker run --rm -p 8100:80 moodlehq/moodleapp:4.0.0
+docker-compose up
