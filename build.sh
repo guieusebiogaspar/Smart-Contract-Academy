@@ -36,9 +36,17 @@ if [[ "$OSTYPE" == "msys"* ]]; then
     dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/mysql-client/*.sh
     dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/postgresql-client/*.sh
     dos2unix 4.1/debian-11/rootfs/opt/bitnami/pst-ini.d/*.sh
-    dos2unix 4.1/debian-11/rootfs/opt/bitnami/*.sh
+    dos2unix 4.1/debian-11/rootfs/*.sh
+
+    dos2unix mariadb/debian-11/prebuildfs/opt/bitnami/scripts/*.sh
+    dos2unix mariadb/debian-11/rootfs/opt/bitnami/scripts/*.sh
+    dos2unix mariadb/debian-11/rootfs/opt/bitnami/scripts/mariadb/*.sh
 fi
 
 cd 4.1/debian-11
 
 docker build -t moodle:latest .
+
+cd ../../mariadb/debian-11
+
+docker build -t mariadb:latest .

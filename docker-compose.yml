@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   mariadb:
-    image: docker.io/bitnami/mariadb:10.6
+    image: mariadb:latest
     container_name: Moodle-MariaDB
     restart: unless-stopped
     environment:
