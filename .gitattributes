@@ -1,0 +1,2 @@
+files/mariadb_data/data/ib_logfile0 filter=lfs diff=lfs merge=lfs -text
+files/mariadb_data/data/ibdata1 filter=lfs diff=lfs merge=lfs -text
