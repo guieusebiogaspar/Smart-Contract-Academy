@@ -11,7 +11,11 @@ You'll need Docker installed. [https://www.docker.com/](https://www.docker.com/)
    ```sh
    git clone https://github.com/guieusebiogaspar/Smart-Contract-Academy.git
    ```
-2. Build the docker images (moodle and mariadb)
+2. Go to the project directory
+   ```sh
+   cd Smart-Contract-Academy
+   ```
+3. Build the docker images (moodle and mariadb)
    ```sh
    sh build.sh
    ```
