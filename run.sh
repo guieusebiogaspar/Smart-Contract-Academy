@@ -25,6 +25,4 @@ while ! docker info &> /dev/null; do
     sleep 10
 done
 
-echo "Docker daemon is running"
-
 docker-compose up
