@@ -1,8 +1,0 @@
-s:160:"{
-  "libraryStrings": {
-    "previousStep": "Попередній крок",
-    "nextStep": "Наступний крок",
-    "step": "Крок :index"
-  }
-}
-";
