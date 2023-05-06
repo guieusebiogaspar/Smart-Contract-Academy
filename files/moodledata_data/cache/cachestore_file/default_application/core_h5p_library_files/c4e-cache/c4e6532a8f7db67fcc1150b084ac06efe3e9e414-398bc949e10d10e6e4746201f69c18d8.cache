@@ -1,0 +1,8 @@
+s:154:"{
+  "libraryStrings": {
+    "previousStep": "Предыдущий шаг",
+    "nextStep": "Следующий шаг",
+    "step": "Шаг :index"
+  }
+}
+";

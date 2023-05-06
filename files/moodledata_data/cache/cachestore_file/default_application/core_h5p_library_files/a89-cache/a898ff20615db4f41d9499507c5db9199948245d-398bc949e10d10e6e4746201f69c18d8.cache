@@ -1,0 +1,15 @@
+s:261:"{
+  "semantics": [
+    {
+      "label": "Twitterin käyttäjätunnus",
+      "description": "Käyttäjätunnus, jonka tweetit haetaan."
+    },
+    {
+      "label": "Näytä vastaukset"
+    },
+    {
+      "label": "Näytettävien tweettien määrä"
+    }
+  ]
+}
+";

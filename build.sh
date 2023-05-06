@@ -25,23 +25,23 @@ while ! docker info &> /dev/null; do
     sleep 10
 done
 
-if [[ "$OSTYPE" == "msys"* ]]; then
-    dos2unix 4.1/debian-11/prebuildfs/opt/bitnami/scripts/*.sh
-    dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/locales/*.sh
-    dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/apache/*.sh
-    dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/*.sh
-    dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/php/*.sh
-    dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/apache-modphp/*.sh
-    dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/moodle/*.sh
-    dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/mysql-client/*.sh
-    dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/postgresql-client/*.sh
-    dos2unix 4.1/debian-11/rootfs/opt/bitnami/pst-ini.d/*.sh
-    dos2unix 4.1/debian-11/rootfs/*.sh
 
-    dos2unix mariadb/debian-11/prebuildfs/opt/bitnami/scripts/*.sh
-    dos2unix mariadb/debian-11/rootfs/opt/bitnami/scripts/*.sh
-    dos2unix mariadb/debian-11/rootfs/opt/bitnami/scripts/mariadb/*.sh
-fi
+dos2unix 4.1/debian-11/prebuildfs/opt/bitnami/scripts/*.sh
+dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/locales/*.sh
+dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/apache/*.sh
+dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/*.sh
+dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/php/*.sh
+dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/apache-modphp/*.sh
+dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/moodle/*.sh
+dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/mysql-client/*.sh
+dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/postgresql-client/*.sh
+dos2unix 4.1/debian-11/rootfs/opt/bitnami/pst-ini.d/*.sh
+dos2unix 4.1/debian-11/rootfs/*.sh
+
+dos2unix mariadb/debian-11/prebuildfs/opt/bitnami/scripts/*.sh
+dos2unix mariadb/debian-11/rootfs/opt/bitnami/scripts/*.sh
+dos2unix mariadb/debian-11/rootfs/opt/bitnami/scripts/mariadb/*.sh
+
 
 cd 4.1/debian-11
 

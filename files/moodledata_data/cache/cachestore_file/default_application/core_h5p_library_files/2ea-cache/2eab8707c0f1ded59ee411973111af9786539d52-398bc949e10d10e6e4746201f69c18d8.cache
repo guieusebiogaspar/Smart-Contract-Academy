@@ -1,0 +1,32 @@
+s:487:"{
+  "semantics": [
+    {
+      "label": "Titel"
+    },
+    {
+      "fields": [
+        {
+          "label": "Protokol",
+          "options": [
+            {
+              "label": "http://"
+            },
+            {
+              "label": "https://"
+            },
+            {
+              "label": "(wortel relatief)"
+            },
+            {
+              "label": "ander"
+            }
+          ]
+        },
+        {
+          "label": "URL"
+        }
+      ]
+    }
+  ]
+}
+";

@@ -1,0 +1,8 @@
+s:130:"{
+  "libraryStrings": {
+    "previousStep": "Edellinen askel",
+    "nextStep": "Seuraava askel",
+    "step": "Askel :index"
+  }
+}
+";

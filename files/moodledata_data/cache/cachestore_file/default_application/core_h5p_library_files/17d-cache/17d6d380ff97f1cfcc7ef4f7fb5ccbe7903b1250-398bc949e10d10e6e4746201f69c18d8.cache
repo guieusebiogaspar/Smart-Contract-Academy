@@ -1,0 +1,8 @@
+s:128:"{
+  "libraryStrings": {
+    "previousStep": "Předchozí krok",
+    "nextStep": "Další krok",
+    "step": "Krok :index"
+  }
+}
+";

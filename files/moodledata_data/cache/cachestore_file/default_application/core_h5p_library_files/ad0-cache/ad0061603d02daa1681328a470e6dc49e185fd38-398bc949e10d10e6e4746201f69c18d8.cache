@@ -1,0 +1,10 @@
+s:454:"{
+  "libraryStrings": {
+    "example": "მაგალითი",
+    "hide": "დამალვა",
+    "showImportantInstructions": "ინსტრუქციების ჩვენება",
+    "hideImportantInstructions": "მნიშვნელოვანი ინსტრუქციების დამალვა",
+    "importantInstructions": "მნიშვნელოვანი ინსტრუქციები"
+  }
+}
+";

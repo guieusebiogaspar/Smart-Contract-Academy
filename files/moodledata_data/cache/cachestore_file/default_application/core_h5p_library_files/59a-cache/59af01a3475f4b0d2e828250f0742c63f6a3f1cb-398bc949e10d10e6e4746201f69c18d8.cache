@@ -1,0 +1,15 @@
+s:234:"{
+  "semantics": [
+    {
+      "label": "Twitter lietotājvārds",
+      "description": "Lietotāja vārds, kura tvītus nolasīt"
+    },
+    {
+      "label": "Rādīt atbildes"
+    },
+    {
+      "label": "Tvītu skaits"
+    }
+  ]
+}
+";

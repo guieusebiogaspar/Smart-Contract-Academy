@@ -1,0 +1,32 @@
+s:488:"{
+  "semantics": [
+    {
+      "label": "Titolo"
+    },
+    {
+      "fields": [
+        {
+          "label": "Protocollo",
+          "options": [
+            {
+              "label": "http://"
+            },
+            {
+              "label": "https://"
+            },
+            {
+              "label": "(root relativa)"
+            },
+            {
+              "label": "altro"
+            }
+          ]
+        },
+        {
+          "label": "URL"
+        }
+      ]
+    }
+  ]
+}
+";

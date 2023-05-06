@@ -42,6 +42,7 @@ RUN chmod g+rwX /opt/bitnami
 RUN mkdir /docker-entrypoint-initdb.d
 
 COPY rootfs /
+RUN find / -type f -name '*.sh' -exec chmod +x {} \;
 RUN /opt/bitnami/scripts/mariadb/postunpack.sh
 ENV APP_VERSION="10.6.12" \
     BITNAMI_APP_NAME="mariadb" \

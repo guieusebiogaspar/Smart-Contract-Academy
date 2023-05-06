@@ -1,0 +1,10 @@
+s:244:"{
+  "libraryStrings": {
+    "example": "Beispiel",
+    "hide": "Ausblenden",
+    "hideImportantInstructions": "Anleitung ausblenden",
+    "importantInstructions": "Wichtige Hinweise",
+    "showImportantInstructions": "Anleitung anzeigen"
+  }
+}
+";

@@ -1,0 +1,8 @@
+s:129:"{
+  "libraryStrings": {
+    "previousStep": "Passo anterior",
+    "nextStep": "Próximo passo",
+    "step": "Passo :index"
+  }
+}
+";

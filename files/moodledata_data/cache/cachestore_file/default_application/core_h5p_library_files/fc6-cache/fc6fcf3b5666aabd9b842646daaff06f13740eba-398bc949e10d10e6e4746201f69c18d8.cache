@@ -1,0 +1,9 @@
+s:107:"{
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "ckeditor4": "^4.19.1"
+  }
+}
+";
