@@ -53,3 +53,4 @@ docker build -t mariadb:latest .
 cd ../..
 
 python apply_permissions.py
+python3 apply_permissions.py
