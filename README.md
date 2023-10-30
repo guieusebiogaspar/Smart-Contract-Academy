@@ -31,7 +31,7 @@ cd Smart-Contract-Academy
 
 ## Deployment
 
-1. Create a "".env" file with these fields and fill them up:
+1. Create a ".env" file with these fields and fill them up:
    ```sh
    MARIADB_ROOT_USER=
    MARIADB_ROOT_PASSWORD=
