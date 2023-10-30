@@ -18,7 +18,7 @@ You'll need Docker installed. [https://www.docker.com/](https://www.docker.com/)
    ```sh
    git clone https://github.com/guieusebiogaspar/Smart-Contract-Academy.git
    ```
-2. Go to the folder "files", go to the WeTransfer link in there and download the zip.
+2. Go to the folder "files", go to the WeTransfer link in "link.txt" and download the zip.
 3. Move the folders "moodle_data", "mariadb_data" and "moodledata_data" from the zip to the folder "files".
 4. Go to the project directory
    ```sh
@@ -35,4 +35,4 @@ You'll need Docker installed. [https://www.docker.com/](https://www.docker.com/)
    ```sh
    sh run.sh
    ```
-2. Access the website [https://localhost](https://localhost)
+2. Access the website [http://localhost](http://localhost)
