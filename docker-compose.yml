@@ -5,12 +5,13 @@ services:
     container_name: Moodle-MariaDB
     restart: unless-stopped
     environment:
-      # ALLOW_EMPTY_PASSWORD is recommended only for development.
-      - ALLOW_EMPTY_PASSWORD=yes
-      - MARIADB_USER=moodle
-      - MARIADB_DATABASE=moodle
-      - MARIADB_CHARACTER_SET=utf8mb4
-      - MARIADB_COLLATE=utf8mb4_unicode_ci
+      - MARIADB_ROOT_USER=${MARIADB_ROOT_USER}
+      - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
+      - MARIADB_USER=${MARIADB_USER}
+      - MARIADB_PASSWORD=${MARIADB_PASSWORD}
+      - MARIADB_DATABASE=${MARIADB_DATABASE}
+      - MARIADB_CHARACTER_SET=${MARIADB_CHARACTER_SET}
+      - MARIADB_COLLATE=${MARIADB_COLLATE}
     volumes:
       - ${MARIADB_VOLUME}:/bitnami/mariadb
     networks:
@@ -19,21 +20,36 @@ services:
     image: moodle:latest
     container_name: Moodle
     restart: unless-stopped
-    ports:
-      - '80:8080'
-      - '443:8443'
     environment:
-      - MOODLE_DATABASE_HOST=mariadb
-      - MOODLE_DATABASE_PORT_NUMBER=3306
-      - MOODLE_DATABASE_USER=moodle
-      - MOODLE_DATABASE_NAME=moodle
-      - ALLOW_EMPTY_PASSWORD=yes
+      - BITNAMI_DEBUG=true
+      - MOODLE_SKIP_BOOTSTRAP=yes
+      - MOODLE_DATABASE_HOST=${MOODLE_DATABASE_HOST}
+      - MOODLE_DATABASE_PORT_NUMBER=${MOODLE_DATABASE_PORT_NUMBER}
+      - MOODLE_DATABASE_USER=${MARIADB_USER}
+      - MOODLE_DATABASE_NAME=${MARIADB_DATABASE}
+      - MOODLE_DATABASE_PASSWORD=${MARIADB_PASSWORD}
+      - MOODLE_SSLPROXY=yes
     volumes:
       - ${MOODLE_VOLUME}:/bitnami/moodle
       - ${MOODLEDATA_VOLUME}:/bitnami/moodledata
     depends_on:
       - mariadb
     networks:
+      - moodle
+  nginx:
+    image: nginx:latest
+    container_name: Moodle-Nginx
+    restart: unless-stopped
+    ports:
+      - '80:80' 
+      #- '443:443' - uncomment after you add your certificate
+    volumes:
+      - ${NGINX_CONF_VOLUME}:/etc/nginx/conf.d/
+      #- ${CERTIFICATE}:/etc/nginx/ssl/fullchain.pem - uncomment after you add your certificate
+      #- ${CERTIFICATE_KEY}:/etc/nginx/ssl/privkey.pem - uncomment after you add your certificate key
+    networks:
+      - moodle
+    depends_on:
       - moodle
 
 volumes:
@@ -43,6 +59,8 @@ volumes:
     name: ${MOODLE_VOLUME}
   moodledata_data:
     name: ${MOODLEDATA_VOLUME}
+  nginx:
+    name: ${NGINX_CONF_VOLUME}
   
 
 networks:

@@ -25,7 +25,6 @@ while ! docker info &> /dev/null; do
     sleep 10
 done
 
-
 dos2unix 4.1/debian-11/prebuildfs/opt/bitnami/scripts/*.sh
 dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/locales/*.sh
 dos2unix 4.1/debian-11/rootfs/opt/bitnami/scripts/apache/*.sh
@@ -50,3 +49,7 @@ docker build -t moodle:latest .
 cd ../../mariadb/debian-11
 
 docker build -t mariadb:latest .
+
+cd ../..
+
+python apply_permissions.py
